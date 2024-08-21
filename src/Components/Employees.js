@@ -9,7 +9,7 @@ function Employeelist() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/employees');
+      const response = await fetch('https://66c66e3c134eb8f434979752.mockapi.io/api/vc/employee');
       const data = await response.json();
       setEmployees(data);
     } catch (error) {
@@ -33,7 +33,7 @@ function Employeelist() {
     })
     .then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/employees/${id}`, {
+          fetch(`https://66c66e3c134eb8f434979752.mockapi.io/api/vc/employee/${id}`, {
                 method: 'DELETE'
             })
             .then(() => {

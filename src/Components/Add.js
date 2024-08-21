@@ -24,7 +24,7 @@ function AddEmployee() {
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:5000/employees', {
+    fetch('https://66c66e3c134eb8f434979752.mockapi.io/api/vc/employee', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ function EditEmployee() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/employees/${id}`)
+       fetch(`https://66c66e3c134eb8f434979752.mockapi.io/api/vc/employee/${id}`)
             .then(response => response.json())
             .then(data => {
                 setFormData(data);
@@ -33,7 +33,7 @@ function EditEmployee() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch(`http://localhost:5000/employees/${id}`, {
+        fetch(`https://66c66e3c134eb8f434979752.mockapi.io/api/vc/employee/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
